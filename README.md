@@ -11,3 +11,4 @@ My build of dwm. I use [alacritty](https://github.com/alacritty/alacritty) as th
 * [rotatestack](https://dwm.suckless.org/patches/rotatestack/)
 * [onlyquitonempty](https://dwm.suckless.org/patches/onlyquitonempty/)
 * [layoutmenu](https://dwm.suckless.org/patches/layoutmenu/) - Needs [xmenu](https://github.com/phillbush/xmenu)
+* [pertag](https://dwm.suckless.org/patches/pertag/) - Useful when I have a DL experiment on one tag (tiled layout) and "watch" programs in centeredmaster layout and I can do some other work in other tag in another layout etc.
