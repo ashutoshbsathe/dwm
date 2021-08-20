@@ -5,3 +5,4 @@ nm-applet &
 pasystray &
 picom &
 dunst &
+slstatus &
