@@ -3,6 +3,6 @@
 sh ~/.fehbg &
 nm-applet &
 pasystray &
-picom &
+picom --backend glx &
 dunst &
 slstatus &
