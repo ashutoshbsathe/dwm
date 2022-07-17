@@ -130,7 +130,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "FiraCode Nerd Font 10";
 #else
-static const char *fonts[]               = { "FiraCode Nerd Font:size=8" };
+static const char *fonts[]               = { "FiraCode Nerd Font:pixelsize=8", "NotoEmoji Nerd Font:pixelsize=8", "NotoColorEmoji:pixelsize=8:antialias=true:autohint=true" };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "FiraCode Nerd Font:size=8";
 
