@@ -128,11 +128,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "FiraCode Nerd Font 10";
+static const char font[]                 = "NotoSans Nerd Font 10";
 #else
-static const char *fonts[]               = { "FiraCode Nerd Font:pixelsize=8", "NotoEmoji Nerd Font:pixelsize=8", "NotoColorEmoji:pixelsize=8:antialias=true:autohint=true" };
+static const char *fonts[]               = { "NotoSans Nerd Font:pixelsize=8", "NotoEmoji Nerd Font:pixelsize=8", "NotoColorEmoji:pixelsize=8:antialias=true:autohint=true" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "FiraCode Nerd Font:size=8";
+static const char dmenufont[]            = "NotoSans Nerd Font:size=8";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -896,15 +896,15 @@ static Key keys[] = {
 	#if STACKER_PATCH
 	STACKKEYS(MODKEY,                              focus)
 	STACKKEYS(MODKEY|ShiftMask,                    push)
-	#else
-	{ MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
-	{ MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
+	// #else
+	// { MODKEY,                       XK_j,          focusstack,             {.i = +1 } },
+	// { MODKEY,                       XK_k,          focusstack,             {.i = -1 } },
 	#endif // STACKER_PATCH
 	#if FOCUSDIR_PATCH
-	{ MODKEY,                       XK_Left,       focusdir,               {.i = 0 } }, // left
-	{ MODKEY,                       XK_Right,      focusdir,               {.i = 1 } }, // right
-	{ MODKEY,                       XK_Up,         focusdir,               {.i = 2 } }, // up
-	{ MODKEY,                       XK_Down,       focusdir,               {.i = 3 } }, // down
+	{ MODKEY,                       XK_h,          focusdir,               {.i = 0 } }, // left
+	{ MODKEY,                       XK_l,          focusdir,               {.i = 1 } }, // right
+	{ MODKEY,                       XK_k,          focusdir,               {.i = 2 } }, // up
+	{ MODKEY,                       XK_j,          focusdir,               {.i = 3 } }, // down
 	#endif // FOCUSDIR_PATCH
 	#if SWAPFOCUS_PATCH && PERTAG_PATCH
 	{ MODKEY,                       XK_s,          swapfocus,              {.i = -1 } },
@@ -913,8 +913,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_v,          switchcol,              {0} },
 	#endif // SWITCHCOL_PATCH
 	#if ROTATESTACK_PATCH
-	{ MODKEY|Mod4Mask,              XK_j,          rotatestack,            {.i = +1 } },
-	{ MODKEY|Mod4Mask,              XK_k,          rotatestack,            {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_j,          rotatestack,            {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,          rotatestack,            {.i = -1 } },
 	#endif // ROTATESTACK_PATCH
 	#if INPLACEROTATE_PATCH
 	{ MODKEY|Mod4Mask,              XK_j,          inplacerotate,          {.i = +2 } }, // same as rotatestack
@@ -932,11 +932,11 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },
 	#endif // FLEXTILE_DELUXE_LAYOUT
-	{ MODKEY,                       XK_h,          setmfact,               {.f = -0.05} },
-	{ MODKEY,                       XK_l,          setmfact,               {.f = +0.05} },
+	{ MODKEY,                       XK_d,          setmfact,               {.f = -0.05} },
+	{ MODKEY,                       XK_i,          setmfact,               {.f = +0.05} },
 	#if CFACTS_PATCH
-	{ MODKEY|ShiftMask,             XK_h,          setcfact,               {.f = +0.25} },
-	{ MODKEY|ShiftMask,             XK_l,          setcfact,               {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_i,          setcfact,               {.f = +0.25} },
+	{ MODKEY|ShiftMask,             XK_d,          setcfact,               {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,          setcfact,               {0} },
 	#endif // CFACTS_PATCH
 	#if ASPECTRESIZE_PATCH
