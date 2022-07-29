@@ -1341,7 +1341,7 @@ static Button buttons[] = {
 	#else
 	{ ClkClientWin,         MODKEY,              Button1,        movemouse,      {0} },
 	#endif // PLACEMOUSE_PATCH
-	{ ClkClientWin,         MODKEY,              Button2,        togglefloating, {0} },
+	{ ClkClientWin,         MODKEY|ShiftMask,    Button1,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,              Button3,        resizemouse,    {0} },
 	#if TAPRESIZE_PATCH
 	{ ClkClientWin,         MODKEY,              Button4,        resizemousescroll, {.v = &scrollargs[0]} },
