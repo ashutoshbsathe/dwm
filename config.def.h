@@ -932,8 +932,8 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_i,          incnstack,              {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_u,          incnstack,              {.i = -1 } },
 	#endif // FLEXTILE_DELUXE_LAYOUT
-	{ MODKEY,                       XK_d,          setmfact,               {.f = -0.05} },
-	{ MODKEY,                       XK_i,          setmfact,               {.f = +0.05} },
+	{ MODKEY|ControlMask,           XK_d,          setmfact,               {.f = -0.05} },
+	{ MODKEY|ControlMask,           XK_i,          setmfact,               {.f = +0.05} },
 	#if CFACTS_PATCH
 	{ MODKEY|ShiftMask,             XK_i,          setcfact,               {.f = +0.25} },
 	{ MODKEY|ShiftMask,             XK_d,          setcfact,               {.f = -0.25} },
