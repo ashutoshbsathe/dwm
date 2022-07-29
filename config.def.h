@@ -130,7 +130,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "NotoSans Nerd Font 10";
 #else
-static const char *fonts[]               = { "NotoSans Nerd Font:pixelsize=8", "NotoEmoji Nerd Font:pixelsize=8", "NotoColorEmoji:pixelsize=8:antialias=true:autohint=true" };
+static const char *fonts[]               = { "NotoSans Nerd Font:pixelsize=8", "NotoColorEmoji:pixelsize=8:antialias=true:autohint=true", "NotoEmoji Nerd Font:pixelsize=8" };
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[]            = "NotoSans Nerd Font:size=8";
 
