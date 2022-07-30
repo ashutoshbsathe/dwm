@@ -1729,7 +1729,7 @@ createmon(void)
 		m->pertag->sellts[i] = m->sellt;
 
 		#if PERTAG_VANITYGAPS_PATCH && VANITYGAPS_PATCH
-		m->pertag->enablegaps[i] = 1;
+		m->pertag->enablegaps[i] = 0;
 		m->pertag->gaps[i] =
 			((gappoh & 0xFF) << 0) | ((gappov & 0xFF) << 8) | ((gappih & 0xFF) << 16) | ((gappiv & 0xFF) << 24);
 		#endif // PERTAG_VANITYGAPS_PATCH | VANITYGAPS_PATCH
